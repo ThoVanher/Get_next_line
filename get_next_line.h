@@ -6,16 +6,16 @@
 /*   By: thvanher <thvanher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/11 10:50:01 by thvanher          #+#    #+#             */
-/*   Updated: 2020/08/11 10:50:22 by thvanher         ###   ########.fr       */
+/*   Updated: 2020/09/14 10:09:51 by thvanher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 64
+# endif
 
-#ifndef BUFFER_SIZE
-# define BUFFER_SIZE 64
-#endif
 # include <sys/types.h>
 # include <sys/stat.h>
 # include <fcntl.h>

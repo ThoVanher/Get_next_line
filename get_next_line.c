@@ -6,7 +6,7 @@
 /*   By: thvanher <thvanher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/11 10:50:01 by thvanher          #+#    #+#             */
-/*   Updated: 2020/08/11 10:50:22 by thvanher         ###   ########.fr       */
+/*   Updated: 2020/09/14 10:12:57 by thvanher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,29 +111,4 @@ int		get_next_line(int fd, char **line)
 		get_the_line(&s_buff, line);
 		return (0);
 	}
-}
-
-int		main(int argc, char **argv)
-{
-	int		fd;
-	char	*line;
-	int		ret ;
-
-	line = 0;
-	if (argc == 0)
-		return (0);
-	fd = open(argv[1], O_RDONLY);
-	if (fd == -1)
-		write(1, "open() failed\n", 14);
-	while ((ret = get_next_line (fd, &line)) == 1)
-	{
-		printf("%s\n", line);
-		printf("%d\n", ret);
-		free(line);
-	}
-	free(line);
-		printf("%d\n", ret);
-	if (close(fd) == -1)
-		write(1, "close() failed\n", 15);
-	return (0);
 }
