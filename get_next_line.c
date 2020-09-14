@@ -122,7 +122,7 @@ int		main(int argc, char **argv)
 	line = 0;
 	if (argc == 0)
 		return (0);
-	fd = 0;
+	fd = open(argv[1], O_RDONLY);
 	if (fd == -1)
 		write(1, "open() failed\n", 14);
 	while ((ret = get_next_line (fd, &line)) == 1)
